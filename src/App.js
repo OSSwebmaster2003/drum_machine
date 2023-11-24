@@ -59,7 +59,7 @@ function App() {
   ];
   return (
     <div className="drum-machine" id="drum-machine">
-      <div className="pad-bank" id="display">
+      <div className="pad-bank">
         {drumElements.map((el) => (
           <div className="drum-pad" id={el.id}>
             <audio src={el.audio} className="clip" id={el.label}></audio>

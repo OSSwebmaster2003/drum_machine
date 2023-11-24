@@ -1,0 +1,91 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8d8d8d;
+}
+#drum-machine {
+  outline: 5px solid orange;
+  position: relative;
+  width: 660px;
+  text-align: center;
+  background-color: #b3b3b3;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.pad-bank {
+  width: 332px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+}
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  box-shadow: black 3px 3px 5px;
+  height: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.drum-pad audio {
+  display: none;
+}
+.controls-container {
+  width: calc(100% - 362px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.control p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.control .select {
+  margin: auto;
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  background-color: black;
+}
+.control .select .inner {
+  width: 23px;
+  height: 100%;
+  background: blue;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#display {
+  width: 200px;
+  background-color: gray;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+[type="range"] {
+  -webkit-appearance: none;
+  margin: 12.5px 0;
+  width: 100%;
+}
+input[type="range" i] {
+  cursor: default;
+  accent-color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+  padding: initial;
+  border: initial;
+  margin: 2px;
+}
